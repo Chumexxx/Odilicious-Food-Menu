@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odilicious Menu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #fff9f2;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .menu-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .menu-header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px dashed #FFA500;
+        }
+        
+        .menu-header h1 {
+            font-size: 48px;
+            color: #FF6B00;
+            margin-bottom: 5px;
+            font-family: 'Brush Script MT', cursive;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+        
+        .menu-header p {
+            font-style: italic;
+            color: #4CAF50;
+        }
+        
+        .menu-section {
+            margin-bottom: 30px;
+        }
+        
+        .menu-section h2 {
+            color: #FF6B00;
+            font-size: 24px;
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #4CAF50;
+        }
+        
+        .menu-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 15px;
+        }
+        
+        .menu-item {
+            position: relative;
+            padding-bottom: 8px;
+        }
+        
+        .menu-item-name {
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .menu-item-price {
+            float: right;
+            color: #FF6B00;
+            font-weight: bold;
+        }
+        
+        .note {
+            font-size: 12px;
+            color: #4CAF50;
+            font-style: italic;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 15px;
+            border-top: 2px dashed #FFA500;
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .special-note {
+            background-color: rgba(255, 165, 0, 0.1);
+            border-left: 3px solid #FF6B00;
+            padding: 10px;
+            margin: 15px 0;
+            font-style: italic;
+        }
+
+        @media print {
+            body {
+                background-color: white;
+            }
+            
+            .menu-container {
+                box-shadow: none;
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-container">
+        <div class="menu-header">
+            <h1>Odilicious</h1>
+            <p>Authentic Nigerian Cuisine</p>
+        </div>
+        
+        <div class="menu-section">
+            <h2>RICE MENU</h2>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <span class="menu-item-name">Jollof Temptation</span>
+                    <span class="menu-item-price">₦3,000</span>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-item-name">Fried Rice</span>
+                    <span class="menu-item-price">₦4,000</span>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-item-name">Spicy Coconut Rice</span>
+                    <span class="menu-item-price">₦3,500</span>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-item-name">Village Rice</span>
+                    <span class="menu-item-price">₦3,500</span>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-item-name">White Rice/Stews/Sauce</span>
+                    <span class="menu-item-price">Varies</span>
+                    <div class="note">Price will be given upon request</div>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-item-name">Ofada Stew</span>
+                    <span class="menu-item-price">₦4,000</span>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-item-name">Palm Oil Stew</span>
+                    <span class="menu-item-price">₦3,000</span>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-item-name">Beef/Fish Tomato Stew</span>
+                    <span class="menu-item-price">₦3,000</span>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-item-name">Beef/Fish Tomato Sauce</span>
+                    <span class="menu-item-price">₦3,000</span>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-item-name">Egg Sauce</span>
+                    <span class="menu-item-price">₦2,500</span>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-item-name">Beef/Fish Banga Soup</span>
+                    <span class="menu-item-price">₦3,500</span>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-item-name">Goat Pepper Soup</span>
+                    <span class="menu-item-price">₦3,500</span>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-item-name">Chicken Pepper Soup</span>
+                    <span class="menu-item-price">₦3,500</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="menu-section">
+            <h2>PROTEIN/SIDE DISH</h2>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <span class="menu-item-name">Beef</span>
+                    <span class="menu-item-price">₦300</span>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-item-name">Kpomo</span>
+                    <span class="menu-item-price">₦300</span>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-item-name">Fish</span>
+                    <span class="menu-item-price">₦1,500</span>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-item-name">Egg</span>
+                    <span class="menu-item-price">₦500</span>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-item-name">Chicken</span>
+                    <span class="menu-item-price">₦1,600/₦2,500</span>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-item-name">Plantain/Salad</span>
+                    <span class="menu-item-price">₦500/₦1,000</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="menu-section">
+            <h2>YAM/PASTA/SIDE DISHES</h2>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <span class="menu-item-name">Spaghetti & Egg</span>
+                    <span class="menu-item-price">₦2,500</span>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-item-name">Noodles & Egg</span>
+                    <span class="menu-item-price">₦2,500</span>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-item-name">Jollof Spaghetti</span>
+                    <span class="menu-item-price">₦3,000</span>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-item-name">Yam Porridge</span>
+                    <span class="menu-item-price">₦2,800</span>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-item-name">Plantain Porridge</span>
+                    <span class="menu-item-price">₦2,800</span>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-item-name">Yam & Beans</span>
+                    <span class="menu-item-price">₦3,500</span>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-item-name">Bean & Plantain</span>
+                    <span class="menu-item-price">₦3,500</span>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-item-name">Peppered Beef/Kpomo</span>
+                    <span class="menu-item-price">₦2,500</span>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-item-name">Peppered Chicken</span>
+                    <span class="menu-item-price">₦4,000</span>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-item-name">Peppered Turkey</span>
+                    <span class="menu-item-price">₦6,500</span>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-item-name">Salad</span>
+                    <span class="menu-item-price">₦1,000</span>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-item-name">Plantain</span>
+                    <span class="menu-item-price">₦500</span>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-item-name">Fried Fish</span>
+                    <span class="menu-item-price">₦1,500</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="menu-section">
+            <h2>SOUPS</h2>
+            <div class="special-note">Weekend only</div>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <span class="menu-item-name">Egusi/Eba/Fufu</span>
+                    <span class="menu-item-price">₦3,500</span>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-item-name">Okro Soup</span>
+                    <span class="menu-item-price">₦3,000</span>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-item-name">Oha Soup</span>
+                    <span class="menu-item-price">₦3,500</span>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-item-name">Vegetable Soup</span>
+                    <span class="menu-item-price">₦4,000</span>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-item-name">Afang Soup</span>
+                    <span class="menu-item-price">₦4,000</span>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-item-name">Ogbono Soup</span>
+                    <span class="menu-item-price">₦3,000</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Prices are subject to change. All dishes are freshly prepared.</p>
+            <p>Contact: +234 800 ODILICIOUS • @odilicious</p>
+        </div>
+    </div>
+</body>
+</html>
